@@ -1,23 +1,28 @@
 <section>
+  <div class="question">
+    <div>
+      <label for="plaintext">Mensagem:</label>
+      <input type="text" id="plaintext" [(ngModel)]="plaintext" />
+    </div>
 
-  <div>
-    <label for="plaintext">Mensagem:</label>
-    <input type="text" id="plaintext" [(ngModel)]="plaintext" />
+    <div>
+      <label for="keyword">Chave:</label>
+      <input type="text" id="keyword" [(ngModel)]="keyword" />
+    </div>
+
+    <button (click)="cipher()">Cifre</button>
+    <button (click)="decipher()">Decifre</button>
   </div>
 
-  <div>
-    <label for="keyword">Chave:</label>
-    <input type="text" id="keyword" [(ngModel)]="keyword" />
-  </div>
+  <div class="answer">
+    <div *ngIf="ciphertext">
+      <h3>Mensagem Cifrada:</h3>
+      <p readonly>{{ ciphertext }}</p>
+    </div>
 
-  <button (click)="cipher()">Cifre</button>
-  <button (click)="decipher()">Decifre</button>
-
-  <div>
-    <p readonly>{{ ciphertext }}</p>
-  </div>
-
-  <div>
-    <p readonly>{{ decryptedText }}</p>
+    <div *ngIf="decryptedText">
+      <h3>Mensagem Decifrada:</h3>
+      <p readonly>{{ decryptedText }}</p>
+    </div>
   </div>
 </section>
