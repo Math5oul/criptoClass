@@ -5,32 +5,28 @@
         class="nav-link"
         [class.active]="activeTab === 1"
         (click)="setActiveTab(1)"
-        >Cifra de Cesar</a
-      >
+      >Cifra de Cesar</a>
     </li>
     <li class="nav-item">
       <a
         class="nav-link"
         [class.active]="activeTab === 2"
         (click)="setActiveTab(2)"
-        >Cifra Vigenère</a
-      >
+      >Cifra Vigenère</a>
     </li>
     <li class="nav-item">
       <a
         class="nav-link"
         [class.active]="activeTab === 3"
         (click)="setActiveTab(3)"
-        >SHA-256</a
-      >
+      >SHA-256</a>
     </li>
     <li class="nav-item">
       <a
         class="nav-link"
         [class.active]="activeTab === 4"
         (click)="setActiveTab(4)"
-        >Referências</a
-      >
+      >Referências</a>
     </li>
   </ul>
 
@@ -49,9 +45,21 @@
 
     <ng-container *ngIf="activeTab === 4">
       <ul>
-        <li><a href="https://wiki.imesec.ime.usp.br/books/ctf-starter-pack/page/cifra-de-c%C3%A9sar" target="_blank">Cifra de César</a></li>
-        <li><a href="https://danieldonda.com/a-matematica-da-cifra-de-vigenere/" target="_blank">Cifra de Vigenère</a></li>
-        <li><a href="https://blog.bitnovo.com/pt/o-que-e-o-algoritmo-sha-256-e-como-funciona/" target="_blank">Algoritmo SHA-256</a></li>
+        <li>
+          <a href="https://wiki.imesec.ime.usp.br/books/ctf-starter-pack/page/cifra-de-c%C3%A9sar" target="_blank">
+            Cifra de César
+          </a>
+        </li>
+        <li>
+          <a href="https://danieldonda.com/a-matematica-da-cifra-de-vigenere/" target="_blank">
+            Cifra de Vigenère
+          </a>
+        </li>
+        <li>
+          <a href="https://blog.bitnovo.com/pt/o-que-e-o-algoritmo-sha-256-e-como-funciona/" target="_blank">
+            Algoritmo SHA-256
+          </a>
+        </li>
       </ul>
     </ng-container>
   </div>
