@@ -1,0 +1,42 @@
+<section class="tab">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        [class.active]="activeTab === 1"
+        (click)="setActiveTab(1)"
+        >Cifra de Cesar</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        [class.active]="activeTab === 2"
+        (click)="setActiveTab(2)"
+        >Cifra Vigenère</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        [class.active]="activeTab === 3"
+        (click)="setActiveTab(3)"
+        >Referências</a
+      >
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <ng-container *ngIf="activeTab === 1">
+      <app-ceasar-cipher></app-ceasar-cipher>
+    </ng-container>
+
+    <ng-container *ngIf="activeTab === 2">
+      <app-vigenere-cipher></app-vigenere-cipher>
+    </ng-container>
+
+    <ng-container *ngIf="activeTab === 3">
+      <!-- Add your Tab 3 content here -->
+    </ng-container>
+  </div>
+</section>

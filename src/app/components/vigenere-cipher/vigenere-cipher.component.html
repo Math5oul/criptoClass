@@ -1,0 +1,18 @@
+<section>
+
+  <div>
+    <label for="plaintext">Mensagem:</label>
+    <input type="text" id="plaintext" [(ngModel)]="plaintext" />
+  </div>
+
+  <div>
+    <label for="keyword">Chave:</label>
+    <input type="text" id="keyword" [(ngModel)]="keyword" />
+  </div>
+
+  <button (click)="cipher()">Submit</button>
+
+  <div>
+    <p readonly>{{ ciphertext }}</p>
+  </div>
+</section>

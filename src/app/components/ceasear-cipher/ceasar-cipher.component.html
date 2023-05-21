@@ -1,0 +1,15 @@
+<section class="ceasar">
+  <div>
+    <label for="message">Mensagem:</label>
+    <input type="text" id="message" [(ngModel)]="message" />
+  </div>
+  <div>
+    <label for="shift">Shift:</label>
+    <input type="number" id="shift" [(ngModel)]="shift" />
+  </div>
+  <button (click)="cipher()">Submit</button>
+  <div *ngIf="encryptedMessage">
+    <h3>Mensagem Cifrada:</h3>
+    <p>{{ encryptedMessage }}</p>
+  </div>
+</section>
