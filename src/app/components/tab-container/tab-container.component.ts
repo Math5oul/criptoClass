@@ -16,7 +16,6 @@ export class TabContainerComponent {
 
   toggleModal() {
     this.modalActive = !this.modalActive;
+
   }
-
-
 }

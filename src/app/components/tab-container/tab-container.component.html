@@ -48,19 +48,20 @@
     </ng-container>
 
     <ng-container *ngIf="activeTab === 4">
-      <!-- Add your Tab 3 content here -->
+      <ul>
+        <li><a href="https://wiki.imesec.ime.usp.br/books/ctf-starter-pack/page/cifra-de-c%C3%A9sar" target="_blank">Cifra de César</a></li>
+        <li><a href="https://danieldonda.com/a-matematica-da-cifra-de-vigenere/" target="_blank">Cifra de Vigenère</a></li>
+        <li><a href="https://blog.bitnovo.com/pt/o-que-e-o-algoritmo-sha-256-e-como-funciona/" target="_blank">Algoritmo SHA-256</a></li>
+      </ul>
     </ng-container>
   </div>
 
-  <button id="entendaButton"
-    (click)="toggleModal()"
-  >
-    Entenda
-  </button>
+  <button *ngIf="activeTab !== 4" id="entendaButton" (click)="toggleModal()">Entenda</button>
 
-<ng-container *ngIf="modalActive">
-  <app-explain-modal [tabPosition]="activeTab" (click)="toggleModal()"></app-explain-modal>
-</ng-container>
-
-
+  <ng-container *ngIf="modalActive">
+    <app-explain-modal
+      [tabPosition]="activeTab"
+      (click)="toggleModal()"
+    ></app-explain-modal>
+  </ng-container>
 </section>
