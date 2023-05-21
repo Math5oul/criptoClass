@@ -21,6 +21,14 @@
         class="nav-link"
         [class.active]="activeTab === 3"
         (click)="setActiveTab(3)"
+        >SHA-256</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        [class.active]="activeTab === 4"
+        (click)="setActiveTab(4)"
         >Referências</a
       >
     </li>
@@ -36,6 +44,10 @@
     </ng-container>
 
     <ng-container *ngIf="activeTab === 3">
+      <app-sha256-cipher></app-sha256-cipher>
+    </ng-container>
+
+    <ng-container *ngIf="activeTab === 4">
       <!-- Add your Tab 3 content here -->
     </ng-container>
   </div>

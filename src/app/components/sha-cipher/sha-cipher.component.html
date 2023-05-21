@@ -1,0 +1,12 @@
+<section>
+  <div>
+    <label for="message">Mensagem:</label>
+    <input type="text" id="message" [(ngModel)]="message" />
+    <button (click)="cipher()">Submit</button>
+  </div>
+
+  <div *ngIf="hashedMessage">
+    <h3>Mensagem Cifrada:</h3>
+    <p class="wrapped-text">{{ hashedMessage }}</p>
+  </div>
+</section>
