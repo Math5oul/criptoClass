@@ -13,9 +13,10 @@ export class TabContainerComponent {
     this.activeTab = n;
   }
 
-
   toggleModal() {
     this.modalActive = !this.modalActive;
-
+  }
+  closeModal() {
+    this.modalActive = false
   }
 }
