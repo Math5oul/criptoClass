@@ -8,10 +8,12 @@ import { CeasarCipherComponent } from './components/ceasear-cipher/ceasar-cipher
 import { FormsModule } from '@angular/forms';
 import { VigenereCipherComponent } from './components/vigenere-cipher/vigenere-cipher.component';
 import { Sha256CipherComponent } from './components/sha-cipher/sha-cipher.component';
+import { ExplainModalComponent } from './components/explain-modal/explain-modal.component';
+
 
 
 @NgModule({
-  declarations: [AppComponent, TabContainerComponent, CeasarCipherComponent, VigenereCipherComponent, Sha256CipherComponent],
+  declarations: [AppComponent, TabContainerComponent, CeasarCipherComponent, VigenereCipherComponent, Sha256CipherComponent, ExplainModalComponent],
 
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

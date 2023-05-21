@@ -51,4 +51,16 @@
       <!-- Add your Tab 3 content here -->
     </ng-container>
   </div>
+
+  <button id="entendaButton"
+    (click)="toggleModal()"
+  >
+    Entenda
+  </button>
+
+<ng-container *ngIf="modalActive">
+  <app-explain-modal [tabPosition]="activeTab" (click)="toggleModal()"></app-explain-modal>
+</ng-container>
+
+
 </section>

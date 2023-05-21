@@ -24,7 +24,6 @@ ul.nav-tabs {
   margin-right: 15px;
   border-right: 1px solid #ccc;
   border-left: 1px solid #ccc;
-
   font-size: 1.5rem;
   padding: 10px 0;
   transition: background-color 0.3s;
@@ -45,7 +44,28 @@ ul.nav-tabs {
   list-style-type: none;
 }
 
-.tab-content{
+.tab-content {
   text-align: center;
   margin-top: 45px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ac3b3b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  width: 200px;
+  align-self: center;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 15px;
+  background-color: #f5f5f5;
 }
