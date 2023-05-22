@@ -1,22 +1,25 @@
 import { Component } from '@angular/core';
-
+import { data } from '../../data/tabsData'
 @Component({
   selector: 'app-tab-container',
   templateUrl: './tab-container.component.html',
   styleUrls: ['./tab-container.component.scss'],
 })
 export class TabContainerComponent {
-  activeTab: number = 1;
-  modalActive: boolean = false;
+  activeTab = 0;
+  modalActive = false;
 
-  setActiveTab(n: number) {
-    this.activeTab = n;
+  tabs = data;
+
+  setActiveTab(index: number): void {
+    this.activeTab = index;
   }
 
-  toggleModal() {
+  toggleModal(): void {
     this.modalActive = !this.modalActive;
   }
-  closeModal() {
-    this.modalActive = false
+
+  closeModal(): void {
+    this.modalActive = false;
   }
 }

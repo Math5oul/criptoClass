@@ -1,0 +1,7 @@
+<ul *ngFor="let tab of tabs; let i = index">
+  <li *ngIf="tabs[i].ref">
+    <a [href]="tabs[i].ref" target="_blank">
+      {{ tabs[i].title }}
+    </a>
+  </li>
+</ul>

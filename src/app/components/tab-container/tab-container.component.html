@@ -1,75 +1,35 @@
 <section class="tab">
-  <ul class="nav nav-tabs"
-  (click)="closeModal()" >
-    <li class="nav-item">
+  <ul class="nav nav-tabs" (click)="closeModal()">
+    <li class="nav-item" *ngFor="let tab of tabs; let i = index">
       <a
         class="nav-link"
-        [class.active]="activeTab === 1"
-        (click)="setActiveTab(1)"
-      >Cifra de Cesar</a>
-    </li>
-    <li class="nav-item">
-      <a
-        class="nav-link"
-        [class.active]="activeTab === 2"
-        (click)="setActiveTab(2)"
-      >Cifra Vigenère</a>
-    </li>
-    <li class="nav-item">
-      <a
-        class="nav-link"
-        [class.active]="activeTab === 3"
-        (click)="setActiveTab(3)"
-      >SHA-256</a>
-    </li>
-    <li class="nav-item">
-      <a
-        class="nav-link"
-        [class.active]="activeTab === 4"
-        (click)="setActiveTab(4)"
-      >Referências</a>
+        [class.active]="activeTab === i"
+        (click)="setActiveTab(i)"
+        >{{ tab.title }}</a
+      >
     </li>
   </ul>
 
-  <div class="tab-content">
-    <ng-container *ngIf="activeTab === 1">
-      <app-ceasar-cipher></app-ceasar-cipher>
-    </ng-container>
-
-    <ng-container *ngIf="activeTab === 2">
-      <app-vigenere-cipher></app-vigenere-cipher>
-    </ng-container>
-
-    <ng-container *ngIf="activeTab === 3">
-      <app-sha256-cipher></app-sha256-cipher>
-    </ng-container>
-
-    <ng-container *ngIf="activeTab === 4">
-      <ul>
-        <li>
-          <a href="https://wiki.imesec.ime.usp.br/books/ctf-starter-pack/page/cifra-de-c%C3%A9sar" target="_blank">
-            Cifra de César
-          </a>
-        </li>
-        <li>
-          <a href="https://danieldonda.com/a-matematica-da-cifra-de-vigenere/" target="_blank">
-            Cifra de Vigenère
-          </a>
-        </li>
-        <li>
-          <a href="https://blog.bitnovo.com/pt/o-que-e-o-algoritmo-sha-256-e-como-funciona/" target="_blank">
-            Algoritmo SHA-256
-          </a>
-        </li>
-      </ul>
+  <div class="tab-content" *ngFor="let tab of tabs; let i = index">
+    <ng-container>
+      <ng-container *ngIf="activeTab === i">
+        <ng-container *ngComponentOutlet="tab.component"></ng-container>
+      </ng-container>
     </ng-container>
   </div>
 
-  <button *ngIf="activeTab !== 4" id="entendaButton" (click)="toggleModal()">Entenda</button>
+  <button
+    *ngIf="tabs[activeTab].explain"
+    id="entendaButton"
+    (click)="toggleModal()"
+  >
+    Entenda
+  </button>
 
   <ng-container *ngIf="modalActive">
     <app-explain-modal
-      [tabPosition]="activeTab"
+      *ngIf="modalActive"
+      [content]="tabs[activeTab].explain"
       (click)="toggleModal()"
     ></app-explain-modal>
   </ng-container>

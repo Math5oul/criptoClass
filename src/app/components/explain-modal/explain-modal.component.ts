@@ -8,6 +8,6 @@ import { Component, Input } from '@angular/core';
 export class ExplainModalComponent {
 
   @Input()
-  tabPosition!: number;
+  content: string | undefined;
 
 }
