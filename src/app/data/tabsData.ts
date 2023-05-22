@@ -1,7 +1,7 @@
 import { Tab } from "../interfaces/Tab.interface";
 import { CeasarCipherComponent } from "../components/tabs/ceasear-cipher/ceasar-cipher.component";
 import { VigenereCipherComponent } from "../components/tabs/vigenere-cipher/vigenere-cipher.component";
-import { Sha256CipherComponent } from "../components/tabs/sha-cipher/sha-cipher.component";
+import { Sha256CipherComponent } from "../components/tabs/sha256-cipher/sha256-cipher.component";
 
 export const data : Tab[] = [
   {

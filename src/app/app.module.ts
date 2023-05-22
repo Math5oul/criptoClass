@@ -7,7 +7,7 @@ import { TabContainerComponent } from './components/tab-container/tab-container.
 import { CeasarCipherComponent } from './components/tabs/ceasear-cipher/ceasar-cipher.component';
 import { FormsModule } from '@angular/forms';
 import { VigenereCipherComponent } from './components/tabs/vigenere-cipher/vigenere-cipher.component';
-import { Sha256CipherComponent } from './components/tabs/sha-cipher/sha-cipher.component';
+import { Sha256CipherComponent } from './components/tabs/sha256-cipher/sha256-cipher.component';
 import { ExplainModalComponent } from './components/explain-modal/explain-modal.component';
 import { ReferenceComponent } from './components/tabs/reference/reference.component';
 

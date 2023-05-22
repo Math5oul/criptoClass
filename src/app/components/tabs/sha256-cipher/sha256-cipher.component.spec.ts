@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShaCipherComponent } from './sha-cipher.component';
+import { ShaCipherComponent } from './sha256-cipher.component';
 
 describe('ShaCipherComponent', () => {
   let component: ShaCipherComponent;
