@@ -2,6 +2,7 @@ import { Tab } from "../interfaces/Tab.interface";
 import { CeasarCipherComponent } from "../components/tabs/ceasear-cipher/ceasar-cipher.component";
 import { VigenereCipherComponent } from "../components/tabs/vigenere-cipher/vigenere-cipher.component";
 import { Sha256CipherComponent } from "../components/tabs/sha256-cipher/sha256-cipher.component";
+import { SobreComponent } from "../components/sobre/sobre.component";
 
 export const data : Tab[] = [
   {
@@ -57,4 +58,7 @@ considerada uma função de hash criptograficamente forte e é amplamente
 adotada como um padrão confiável na indústria de segurança da informação.`,
 ref: `https://blog.bitnovo.com/pt/o-que-e-o-algoritmo-sha-256-e-como-funciona/`
   },
+  {title: "Sobre",
+  component: SobreComponent,
+  }
 ];
